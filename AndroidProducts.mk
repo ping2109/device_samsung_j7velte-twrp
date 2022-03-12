@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/j7velte
+PRODUCT_MAKEFILES := \
+     $(LOCAL_DIR)/omni_j7velte.mk
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_j7velte.mk
+COMMON_LUNCH_CHOICES := \
+    omni_j7velte-user \
+    omni_j7velte-userdebug \
+    omni_j7velte-eng
